@@ -1,5 +1,5 @@
 # Colours-Application
-It is using Express.js for managing an application that performs operations related to colours. More information on the task preformed on this project can be found in Lab 4 Compulsary V2.docx. <br/><br/>
+It is using Express.js for managing an application that performs operations related to colours. More information on the task preformed on this project can be found in <b>Lab 4 Compulsary V2.docx. </b><br/><br/>
 
 These are parts of the tasks that were preformed using express. <br/>
 ![image](https://user-images.githubusercontent.com/44726422/166506499-aad2ad93-d35b-43c7-8a03-d98132c1cfc0.png)
