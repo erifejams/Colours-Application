@@ -5,7 +5,7 @@ These are parts of the tasks that were preformed using express. <br/>
 ![image](https://user-images.githubusercontent.com/44726422/166506499-aad2ad93-d35b-43c7-8a03-d98132c1cfc0.png)
 
 
-# Execute program
+# How to execute program
 •	Node express –save – download in cmd terminal. <br/>
 •	Download npm install -g npm@8.7.0 in terminal. <br/>
 •	Download npm install --save cookie-parser in terminal. <br/>
