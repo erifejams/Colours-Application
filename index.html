@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="./public/css/index.css"/>
+      <script src="Express.js"></script>
+      <!-- import jQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="/js/revolution.extension.actions.min.js"></script>
+      <title>Performance of operations relating to colours</title>
+   </head>
+
+   <body onload="getColor()">
+        <h1>Colour Operations</h1>
+
+        <!--general buttons for displaying things-->
+        <div id = "buttonsOverall">
+            <form method = "get" action = "/colours">
+                <br>
+
+                <button type="submit" id="showButton" >Show Colour</button>
+                <br>
+                <br>
+            </form>
+
+            <form method = "DELETE" action="/colours/">
+                <input type ="text" id = "deleteID">
+                <button type="submit" id="removeButton" >Remove Colour</button>
+                <br>
+                <br>
+            </form>
+
+            <!--modifying the colour-->
+            <form method = "PUT" action="/colours/:colorId">
+                <button onclick = "showForm()" type="Button" id="modifyButton" name = "">Modify Colour</button>
+                <br>
+                <br>
+
+            </form>
+
+            <form method = "PUT" action = "/colours/new" id ="HideDeleteForm" name="ColourId">
+                <p id = "firstOne">ColourId:</p> <input type ="text" id = "displayBox" name="ColourId" required>
+                <br>
+                <br>
+
+                <p id = "firstOne">hexString:</p> <input input type ="text" id = "displayBox" name="hexString" required>
+                <br>
+                <br>
+
+                <p id = "firstOne">RGB:</p> <input type ="text" id = "displayBox" name="RGB" required>
+                <br>
+                <br>
+
+                <p id = "firstOne">HSL:</p><input type ="text" id = "displayBox" name="HSL" required>
+                <br>
+                <br>
+
+                <p id = "firstOne">Name:</p><input type ="text" id = "displayBox" name="Name" required>
+                <br>
+                <br>
+
+                <!---when clicked colour is inserted into the file, so can find the colour in the file-->
+                <input type = "submit" value = "Insert Colour">
+
+                <br>
+                <br>
+            </form>
+
+        </div>
+
+        <br>
+        <br>
+    
+        <!--CREATES A NEW COLOUR BASED ON USER INPUT-->
+        <div id = "box">
+            <form method = "POST" action = "/colours">
+                <p>Enter the values for your new colours. Your new colour will be added to the data, which you will find at the bottom of the page when you click the bottom insert colour.</p>
+                <p id = "firstOne">ColourId:</p> <input type ="text" id = "displayBox" name="ColourId">
+                <br>
+                <br>
+
+                <p id = "firstOne">hexString:</p> <input input type ="text" id = "displayBox" name="hexString" required>
+                <br>
+                <br>
+
+                <p id = "firstOne">RGB:</p> <input type ="text" id = "displayBox" name="RGB" required>
+                <br>
+                <br>
+
+                <p id = "firstOne">HSL:</p><input type ="text" id = "displayBox" name="HSL" required>
+                <br>
+                <br>
+
+                <p id = "firstOne">Name:</p><input type ="text" id = "displayBox" name="Name" required>
+                <br>
+                <br>
+
+                <!---when clicked colour is inserted into the file, so can find the colour in the file-->
+                <input type = "submit" value = "Insert Colour">
+            </form>
+
+            
+            <form method = "get" action = "/colours/:colorId">
+                <br>
+                <br>
+                <!---Trying to do pagination-->
+                <!--this is to put the number for which page you want to go to-->
+                <p>This is to go to other pages. Press Enter after</p>
+                <input type ="number" id = "pagNum">
+            </form>
+
+        </div>
+
+
+        <br>
+        <br>
+        <!---forms for the cookie part-->
+        <form name = "BGForm">
+
+           Select a backgound colour:
+            <select name="NewBGColor">
+                <option value="white">WHITE
+                <option value="blue">BLUE  
+                <option value="orange">ORANGE
+                <option value="black">BLACK
+                <option value="green">GREEN
+                <option value="red">RED
+            </select>
+
+            <input type="button" id="selectBackground" value="Select background"  onclick= "setColor()"/>
+
+        </form>
+   </body>
+</html>
